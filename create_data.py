@@ -1,12 +1,14 @@
 #creating database
 import cv2, sys, numpy, os
 haar_file = 'haarcascade_frontalface_default.xml'
+cwd = os.getcwd()
 datasets = 'datasets'  #All the faces data will be present this folder
-sub_data = 'aquib'     #These are sub data sets of folder, for my faces I've used my name
+sub_data = 'rowen'     #These are sub data sets of folder, for my faces I've used my name
 
-path = os.path.join(datasets, sub_data)
+path = os.path.join("/", cwd, datasets)
+path = os.path.join("/", path, sub_data)
 if not os.path.isdir(path):
-    os.mkdir(path)
+    os.makedirs(path)
 (width, height) = (130, 100)    # defining the size of images 
 
 

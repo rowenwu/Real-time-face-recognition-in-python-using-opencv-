@@ -43,10 +43,9 @@ while True:
         cv2.rectangle(im, (x, y), (x + w, y + h), (0, 255, 0), 3)
 
         if prediction[1]<500:
-
-	       cv2.putText(im,'%s - %.0f' % (names[prediction[0]],prediction[1]),(x-10, y-10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))
-    	else:
-    	  cv2.putText(im,'not recognized',(x-10, y-10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))
+            cv2.putText(im,'%s - %.0f' % (names[prediction[0]],prediction[1]),(x-10, y-10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))
+        else:
+            cv2.putText(im,'not recognized',(x-10, y-10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))
 
     cv2.imshow('OpenCV', im)
     key = cv2.waitKey(10)

@@ -13,8 +13,8 @@ haar_cascade = cv2.CascadeClassifier(fn_haar)
 webcam = cv2.VideoCapture(0)
 
 
-print "-----------------------Taking pictures----------------------"
-print "--------------------Give some expressions---------------------"
+print("-----------------------Taking pictures----------------------")
+print("--------------------Give some expressions---------------------")
 # The program loops until it has 20 images of the face.
 
 while count < 45:
@@ -35,8 +35,8 @@ while count < 45:
         cv2.rectangle(im, (x, y), (x + w, y + h), (0, 255, 0), 3)
         cv2.putText(im, fn_name, (x - 10, y - 10), cv2.FONT_HERSHEY_PLAIN,
             1,(0, 255, 0))
-	time.sleep(0.38)        
-	count += 1
+    time.sleep(0.38)        
+    count += 1
    
     	
     cv2.imshow('OpenCV', im)

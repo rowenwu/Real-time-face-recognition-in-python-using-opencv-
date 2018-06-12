@@ -16,10 +16,10 @@ for (subdirs, dirs, files) in os.walk(fn_dir):
         for filename in os.listdir(subjectpath):
             path = subjectpath + '/' + filename
             lable = id
-	    images.append(cv2.imread(path, 0))
+            images.append(cv2.imread(path, 0))
             lables.append(int(lable))
         id += 1
-(im_width, im_height) = (112, 92)
+# (im_width, im_height) = (130, 100)
 
 # Create a Numpy array from the two lists above
 (images, lables) = [numpy.array(lis) for lis in [images, lables]]
